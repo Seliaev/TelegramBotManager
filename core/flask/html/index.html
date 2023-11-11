@@ -1,0 +1,29 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Management</title>
+</head>
+<body>
+    <h2>Bot Management</h2>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <p>Select an item menu</p>
+    <form action="{{ url_for('start_bot') }}" method="get">
+        <button type="submit">Start Bot</button>
+    </form>
+    <form action="{{ url_for('stop_bot') }}" method="get">
+        <button type="submit">Stop Bot</button>
+    </form>
+    <form action="{{ url_for('restart_bot') }}" method="get">
+        <button type="submit">Restart Bot</button>
+    </form>
+    <form action="{{ url_for('stats') }}" method="get">
+        <button type="submit">View Stats</button>
+    </form>
+    <form action="{{ url_for('logout') }}" method="get">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>

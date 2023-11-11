@@ -1,0 +1,30 @@
+<!-- stats.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats</title>
+    <script>
+        function refreshPage() {
+            location.reload();
+        }
+
+        // Automatic update every 10 seconds
+        setInterval(function() {
+            location.reload();
+        }, 10000);
+    </script>
+</head>
+<body>
+    <h2>Resources consumed by the bot</h2>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <p>CPU Usage: {{ cpu_percent }}%</p>
+    <p>Memory Usage: {{ memory_percent }}%</p>
+    <button onclick="refreshPage()">Refresh Page</button>
+    <form action="{{ url_for('index') }}" method="get">
+        <button type="submit">Back</button>
+    </form>
+
+</body>
+</html>

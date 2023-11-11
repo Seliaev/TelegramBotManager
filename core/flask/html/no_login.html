@@ -1,0 +1,17 @@
+<!-- no_login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h2>ATTENTION</h2>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <p>You entered the wrong password 3 times</p>
+    <form action="{{ url_for('login') }}" method="get">
+        <button type="submit">Back</button>
+    </form>
+</body>
+</html>
